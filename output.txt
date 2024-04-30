@@ -1,0 +1,105 @@
+File: /Users/chrisyoung/Documents/SPAs/victory-of-winonna/app.js
+document.addEventListener("DOMContentLoaded", function() {
+    const veggies = [
+        { name: "Tomato", image: "https://via.placeholder.com/100", desc: "Rich in vitamin C and K." },
+        { name: "Carrot", image: "https://via.placeholder.com/100", desc: "Great source of beta carotene." },
+        { name: "Spinach", image: "https://via.placeholder.com/100", desc: "Loaded with tons of nutrients in a low-calorie package." }
+    ];
+
+    const container = document.getElementById('vegetables');
+    veggies.forEach(veg => {
+        const vegElement = document.createElement('div');
+        vegElement.innerHTML = `
+            <img src="${veg.image}" alt="${veg.name}">
+            <h3>${veg.name}</h3>
+            <p>${veg.desc}</p>
+        `;
+        container.appendChild(vegElement);
+    });
+});
+
+
+File: /Users/chrisyoung/Documents/SPAs/victory-of-winonna/index.html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Garden</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Victory Of Winonna</h1>
+    </header>
+    <section id="admin" style="display:none;">
+        <h2>Admin Panel</h2>
+        <form id="adminForm">
+            <input type="text" id="name" placeholder="Name of the Plant" required>
+            <input type="url" id="image" placeholder="Image URL" required>
+            <textarea id="desc" placeholder="Description" required></textarea>
+            <button type="submit">Add Plant</button>
+        </form>
+    </section>
+    <main>
+        <section id="vegetables"></section>
+        <section id="flowers"></section>
+        <section id="native"></section>
+    </main>
+    <footer>
+        <p>© 2024 My Garden</p>
+    </footer>
+    <script src="app.js"></script>
+</body>
+</html>
+
+
+
+
+File: /Users/chrisyoung/Documents/SPAs/victory-of-winonna/styles.css
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background: #f4f4f4;
+}
+
+header, footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1em 0;
+}
+
+main {
+    padding: 20px;
+    max-width: 800px;
+    margin: 20px auto;
+    background: white;
+}
+
+section div {
+    margin-bottom: 20px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 20px;
+}
+
+img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-right: 20px;
+    float: left;
+}
+
+h3 {
+    margin: 0 0 10px 0;
+}
+
+p {
+    margin: 0;
+    clear: both;
+}
+
+
