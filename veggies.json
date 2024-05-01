@@ -1,0 +1,12 @@
+[
+  {
+    "name": "Jimmy Nardello Pepper",
+    "image": "example/img.jpg",
+    "desc": "This is tasty."
+  },
+  {
+    "name": "Flower",
+    "image": "url",
+    "desc": "Yellow and lovely."
+  }
+]
