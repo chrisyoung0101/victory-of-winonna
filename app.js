@@ -41,6 +41,7 @@ document.addEventListener("DOMContentLoaded", function() {
           "image": "https://raw.githubusercontent.com/chrisyoung0101/victory-of-winonna/main/images/scotch-bonnet.jpeg",
           "desc": "<h3>Description</h3><p>The 'Scotch Bonnet' is powerfully hot, similar to the habanero but with a fruity or smoky flavor. Also known as 'Jamaica Red' and sometimes called the Scotty Bon or Bonny pepper, it is named for its resemblance to a Scottish cap. If you like your peppers fiery hot, you will enjoy its citrus, apricot-like flavor that is sweetest when the fruit turns red. Try it in jerk dishes, mango salsa, blended with dark chocolate, or with fruit.</p><h3>Heat Level</h3><p>100,000-325,000 Scoville heat units (extremely hot).</p>"
 
+          
         },
         {
           "name": "Galahad Tomato",
