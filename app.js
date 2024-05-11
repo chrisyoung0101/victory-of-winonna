@@ -44,7 +44,8 @@ document.addEventListener("DOMContentLoaded", function() {
 
         },
         {
-          "name": "Is your tomato determinate or indeterminate?",
+          "name": "determinate vs indeterminate tomatoes",
+          "image": "https://raw.githubusercontent.com/chrisyoung0101/victory-of-winonna/main/images/tomatoes.jpeg",          
           "desc": "<h3>Description</h3><p>Understanding whether your tomato is determinate or indeterminate can help tailor your gardening techniques to ensure optimal growth and yield. <strong>Determinate tomatoes</strong>, often called 'bush' tomatoes, grow to a compact height (usually 3-4 feet) and stop growing when fruit sets on the top bud. All tomatoes ripen roughly at the same time (usually over a period of 1-2 weeks), making them ideal for those who want a lot of tomatoes at once. They are perfect for container growing and do not require pruning.<br><br><strong>Indeterminate tomatoes</strong>, on the other hand, continue to grow and produce fruit throughout the growing season until killed by frost. They can reach heights of 6 feet or more and require staking or caging for support. Pruning is also necessary to control their growth and improve air circulation around the plants. Indeterminate varieties are ideal for gardeners who prefer a steady supply of tomatoes rather than one large harvest.</p><h3>Key Differences</h3><ul><li><strong>Growth Habit:</strong> Determinate tomatoes grow to a fixed height, indeterminate tomatoes keep growing.</li><li><strong>Harvest Time:</strong> Determinate tomatoes bear fruit all at once, indeterminate tomatoes produce continuously.</li><li><strong>Support Needs:</strong> Indeterminate tomatoes require staking or caging, determinates less so.</li><li><strong>Suitable for:</strong> Determinates are good for containers and small spaces, indeterminates for larger garden areas.</li></ul>"
         },        
         {

@@ -4,88 +4,13 @@ File: /Users/chrisyoung/Documents/SPAs/victory-of-winonna/package.json
     "version": "1.0.0",
     "type": "module",
     "scripts": {
-      "start": "node your-script.js"
+      "build": "echo 'No build needed'"
     },
     "dependencies": {
      
     }
   }
   
-
-File: /Users/chrisyoung/Documents/SPAs/victory-of-winonna/index.html
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Garden</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <header>
-        <h1>Victory Of Winona</h1>
-    </header>
-
-    <!-- Sidebar Navigation -->
-    <div id="sidebar">
-        <h3>Vegetables</h3>
-        <ul>
-            <li><a href="#PasillaBajia">Pasilla Bajia</a></li>
-            <li><a href="#GoldenMarconi">Golden Marconi</a></li>
-            <li><a href="#ThaiHot">Thai hot</a></li>
-            <li><a href="#ShishitoPepper">Shishito Pepper</a></li>
-            <li><a href="#HimoTogarashi">Himo Togarashi</a></li>
-            <li><a href="#JimmyNardelloPepper">Jimmy Nardello Pepper</a></li>
-            <li><a href="#ScotchBonnet">Scotch Bonnet</a></li>
-            <li><a href="#GalahadTomato">Galahad Tomato</a></li>
-            <li><a href="#LucidGemTomato">Lucid Gem Tomato</a></li>
-            <li><a href="#MoneyMakerTomato">Money Maker Tomato</a></li>
-            <li><a href="#LilBitesCherryTomato">Lil Bites Cherry Tomato</a></li>
-            <li><a href="#CherryFallsTomato">Cherry Falls Tomato</a></li>
-            <li><a href="#FortaminoRootstockTomato">Fortamino Rootstock Tomato</a></li>
-            <li><a href="#SanMarzanoTomato">San Marzano Tomato</a></li>
-            <li><a href="#TasmanianChocolateTomato">Tasmanian Chocolate Heirloom Container Tomatoes</a></li>
-            <li><a href="#CherokeeCarbonTomato">Cherokee Carbon Tomato</a></li>
-        </ul>
-        <h3>Flowers</h3>
-        <ul>
-            <li><a href="#Nasturtium">#Nasturtium/a></li>
-        </ul>
-        <h3>Native Plants</h3>
-        <ul>
-            <!-- Future links for native plant items -->
-        </ul>
-    </div>
-
-    <!-- Up Arrow for scrolling to top -->
-    <div id="upArrow" style="display: none;">
-        <img src="up-arrow-icon.png" alt="Back to Top" />
-    </div>
-
-    <section id="admin" style="display:none;">
-        <h2>Admin Panel</h2>
-        <form id="adminForm">
-            <input type="text" id="name" placeholder="Name of the Plant" required>
-            <input type="url" id="image" placeholder="Image URL" required>
-            <textarea id="desc" placeholder="Description" required></textarea>
-            <button type="submit">Add Plant</button>
-        </form>
-    </section>
-
-    <main>
-        <section id="vegetables"></section>
-        <section id="flowers"></section>
-        <section id="native"></section>
-    </main>
-
-    <footer>
-        <p>© 2024 Victory Of Winonna</p>
-    </footer>
-
-    <script src="app.js"></script>
-</body>
-</html>
-
 
 File: /Users/chrisyoung/Documents/SPAs/victory-of-winonna/styles.css
 body {
@@ -182,6 +107,82 @@ p {
 }
 
 
+File: /Users/chrisyoung/Documents/SPAs/victory-of-winonna/index.html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Victory of Winona</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Victory Of Winona</h1>
+    </header>
+
+    <!-- Sidebar Navigation -->
+    <div id="sidebar">
+        <h3>Vegetables</h3>
+        <ul>
+            <li><a href="#PasillaBajia">Pasilla Bajia</a></li>
+            <li><a href="#GoldenMarconi">Golden Marconi</a></li>
+            <li><a href="#ThaiHot">Thai hot</a></li>
+            <li><a href="#ShishitoPepper">Shishito Pepper</a></li>
+            <li><a href="#HimoTogarashi">Himo Togarashi</a></li>
+            <li><a href="#JimmyNardelloPepper">Jimmy Nardello Pepper</a></li>
+            <li><a href="#ScotchBonnet">Scotch Bonnet</a></li>
+            <li><a href="#IsYourTomatoDeterminateOrIndeterminate">Is your tomato determinate or indeterminate?</a></li>
+            <li><a href="#GalahadTomato">Galahad Tomato</a></li>
+            <li><a href="#LucidGemTomato">Lucid Gem Tomato</a></li>
+            <li><a href="#MoneyMakerTomato">Money Maker Tomato</a></li>
+            <li><a href="#LilBitesCherryTomato">Lil Bites Cherry Tomato</a></li>
+            <li><a href="#CherryFallsTomato">Cherry Falls Tomato</a></li>
+            <li><a href="#FortaminoRootstockTomato">Fortamino Rootstock Tomato</a></li>
+            <li><a href="#SanMarzanoTomato">San Marzano Tomato</a></li>
+            <li><a href="#TasmanianChocolateTomato">Tasmanian Chocolate Heirloom Container Tomatoes</a></li>
+            <li><a href="#CherokeeCarbonTomato">Cherokee Carbon Tomato</a></li>
+        </ul>
+        <h3>Flowers</h3>
+        <ul>
+            <li><a href="#Nasturtium">Nasturtium</a></li>
+        </ul>
+        <h3>Native Plants</h3>
+        <ul>
+            <!-- Future links for native plant items -->
+        </ul>
+    </div>
+
+    <!-- Up Arrow for scrolling to top -->
+    <div id="upArrow" style="display: none;">
+        <img src="up-arrow-icon.png" alt="Back to Top" />
+    </div>
+
+    <section id="admin" style="display:none;">
+        <h2>Admin Panel</h2>
+        <form id="adminForm">
+            <input type="text" id="name" placeholder="Name of the Plant" required>
+            <input type="url" id="image" placeholder="Image URL" required>
+            <textarea id="desc" placeholder="Description" required></textarea>
+            <button type="submit">Add Plant</button>
+        </form>
+    </section>
+
+    <main>
+        <section id="vegetables"></section>
+        <section id="flowers"></section>
+        <section id="native"></section>
+    </main>
+
+    <footer>
+        <p>© 2024 Victory Of Winonna</p>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
+
+
 File: /Users/chrisyoung/Documents/SPAs/victory-of-winonna/app.js
 document.addEventListener("DOMContentLoaded", function() {
     const veggies = [
@@ -228,6 +229,10 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
         },
+        {
+          "name": "Is your tomato determinate or indeterminate?",
+          "desc": "<h3>Description</h3><p>Understanding whether your tomato is determinate or indeterminate can help tailor your gardening techniques to ensure optimal growth and yield. <strong>Determinate tomatoes</strong>, often called 'bush' tomatoes, grow to a compact height (usually 3-4 feet) and stop growing when fruit sets on the top bud. All tomatoes ripen roughly at the same time (usually over a period of 1-2 weeks), making them ideal for those who want a lot of tomatoes at once. They are perfect for container growing and do not require pruning.<br><br><strong>Indeterminate tomatoes</strong>, on the other hand, continue to grow and produce fruit throughout the growing season until killed by frost. They can reach heights of 6 feet or more and require staking or caging for support. Pruning is also necessary to control their growth and improve air circulation around the plants. Indeterminate varieties are ideal for gardeners who prefer a steady supply of tomatoes rather than one large harvest.</p><h3>Key Differences</h3><ul><li><strong>Growth Habit:</strong> Determinate tomatoes grow to a fixed height, indeterminate tomatoes keep growing.</li><li><strong>Harvest Time:</strong> Determinate tomatoes bear fruit all at once, indeterminate tomatoes produce continuously.</li><li><strong>Support Needs:</strong> Indeterminate tomatoes require staking or caging, determinates less so.</li><li><strong>Suitable for:</strong> Determinates are good for containers and small spaces, indeterminates for larger garden areas.</li></ul>"
+        },        
         {
           "name": "Galahad Tomato",
           "image": "https://raw.githubusercontent.com/chrisyoung0101/victory-of-winonna/main/images/galahad_tomato.jpeg",
