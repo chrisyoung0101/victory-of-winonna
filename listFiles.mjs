@@ -7,7 +7,8 @@ const outputFilePath = path.join(process.cwd(), 'output.txt'); // Adjusting for 
 const targetFiles = [
     'index.html',
     'styles.css',
-    'app.js'
+    'app.js',
+    'package.json'
 ];
 
 function logFile(filePath) {
