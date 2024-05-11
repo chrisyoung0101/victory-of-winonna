@@ -46,16 +46,25 @@ p {
 /* Sidebar styles */
 #sidebar {
     position: fixed;
-    top: 100px; /* Adjust based on header height */
+    top: 60px;
     left: 0;
-    width: 200px;
-    max-height: 80vh; /* 80% of the viewport height */
-    background-color: #eee;
+    width: 250px;
+    max-height: 90vh;
+    background-color: #f4f4f4;
     padding: 10px;
-    overflow-y: auto; /* Enables vertical scrolling */
-    box-shadow: 2px 0 5px rgba(0,0,0,0.1); /* Optional: adds shadow for depth */
-    z-index: 1000; /* Ensures the sidebar is above other content */
+    overflow-y: auto;
+    box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease-in-out;
+    transform: translateX(-100%); /* start hidden */
+    z-index: 1000;
 }
+
+@media (min-width: 768px) {
+    #sidebar {
+        transform: translateX(0); /* Always visible on wider screens */
+    }
+}
+
 
 #sidebar h3 {
     color: #333;
