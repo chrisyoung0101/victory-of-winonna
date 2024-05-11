@@ -43,6 +43,14 @@ p {
     clear: both;
 }
 
+@keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+
+
+
 
 /* Sidebar styles */
 #sidebar {
@@ -101,6 +109,7 @@ p {
     border-bottom: 15px solid black;
 }
 
+/* top menu toggle is just the generic button while the below is the tomato */
 #menu-toggle {
     position: fixed;
     top: 20px;  /* Adjust based on design */
@@ -122,5 +131,72 @@ p {
     background-color: #0056b3; /* Darker blue when hovered/focused for better visibility */
 }
 
+#menu-toggle {
+    position: fixed;
+    top: 20px;  /* Adjust based on design */
+    right: 20px; /* Position on the right side */
+    z-index: 1001; /* Ensure it's above other content */
+    background-color: #FF6347; /* Tomato red color */
+    color: white; /* White text color */
+    border: 3px solid black; /* Black border to create a distinct edge */
+    border-radius: 50%; /* Makes the button round */
+    width: 60px; /* Set the width of the button */
+    height: 60px; /* Set the height of the button */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer; /* Cursor indicates it's clickable */
+    transition: background-color 0.3s ease; /* Smooth transition for background color */
+}
 
+#menu-toggle:hover, #menu-toggle:focus {
+    background-color: #E34234; /* Darker red when hovered/focused for better visibility */
+}
+
+#menu-toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1001;
+    background-color: #FF6347; /* Tomato red color */
+    color: white;
+    border: 2px solid #333; /* Dark border for better tomato silhouette */
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#menu-toggle:hover, #menu-toggle:focus {
+    background-color: #E34234; /* Darker shade on hover */
+}
+
+#menu-toggle::before, #menu-toggle::after {
+    content: "";
+    position: absolute;
+    background-color: green;
+    border-radius: 50%;
+}
+
+#menu-toggle::before {
+    top: -12px; /* Adjust position above the tomato */
+    left: 30%; /* Adjust horizontal position */
+    width: 12px; /* Elliptical leaf */
+    height: 18px;
+    border-radius: 50% 50% 50% 50%;
+    transform: rotate(-35deg); /* Tilt the leaf */
+}
+
+#menu-toggle::after {
+    top: -12px; /* Adjust to appear from the top of the tomato */
+    left: 50%; /* Center the stem */
+    transform: translateX(-50%);
+    width: 4px; /* Narrow stem */
+    height: 10px;
+    background-color: darkgreen; /* Dark green for the stem */
+}
 
