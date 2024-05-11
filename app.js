@@ -124,21 +124,20 @@ document.addEventListener("DOMContentLoaded", function() {
     container.appendChild(vegElement);
   });
 
+  const animations = ['spin 0.5s ease-in-out', 'jump 0.5s ease-in-out', 'flip 1s ease-in-out', 'shake 0.5s ease-in-out'];
+  
   const sidebar = document.getElementById('sidebar');
   const toggleButton = document.getElementById('menu-toggle');
-  const closeButton = document.getElementById('close-sidebar'); // Use existing close button from HTML
+  const closeButton = document.getElementById('close-sidebar');
 
   toggleButton.addEventListener('click', function() {
-    // Toggle sidebar visibility
-    sidebar.style.transform = (sidebar.style.transform === 'translateX(0%)') ? 'translateX(100%)' : 'translateX(0%)';
+    sidebar.style.transform = sidebar.style.transform === 'translateX(0%)' ? 'translateX(100%)' : 'translateX(0%)';
   });
 
   closeButton.addEventListener('click', function() {
-    // Close sidebar when 'x' is clicked
     sidebar.style.transform = 'translateX(100%)';
   });
 
-  // Spin effect on sidebar links
   const links = sidebar.querySelectorAll('a');
   links.forEach(link => {
     link.addEventListener('click', () => {
@@ -148,7 +147,8 @@ document.addEventListener("DOMContentLoaded", function() {
       if (targetElement) {
         const img = targetElement.querySelector('img');
         if (img) {
-          img.style.animation = 'spin 0.5s ease-in-out';
+          const randomAnimation = animations[Math.floor(Math.random() * animations.length)];
+          img.style.animation = randomAnimation;
           img.addEventListener('animationend', () => {
             img.style.animation = '';
           }, { once: true });
@@ -157,13 +157,8 @@ document.addEventListener("DOMContentLoaded", function() {
     });
   });
 
-  // Scroll to top functionality
   window.onscroll = function() {
-    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-      document.getElementById('upArrow').style.display = "block";
-    } else {
-      document.getElementById('upArrow').style.display = "none";
-    }
+    document.getElementById('upArrow').style.display = document.body.scrollTop > 20 || document.documentElement.scrollTop > 20 ? "block" : "none";
   };
 
   document.getElementById('upArrow').onclick = function() {
