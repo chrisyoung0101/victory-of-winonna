@@ -41,7 +41,7 @@ document.addEventListener("DOMContentLoaded", function() {
           "image": "https://raw.githubusercontent.com/chrisyoung0101/victory-of-winonna/main/images/scotch-bonnet.jpeg",
           "desc": "<h3>Description</h3><p>The 'Scotch Bonnet' is powerfully hot, similar to the habanero but with a fruity or smoky flavor. Also known as 'Jamaica Red' and sometimes called the Scotty Bon or Bonny pepper, it is named for its resemblance to a Scottish cap. If you like your peppers fiery hot, you will enjoy its citrus, apricot-like flavor that is sweetest when the fruit turns red. Try it in jerk dishes, mango salsa, blended with dark chocolate, or with fruit.</p><h3>Heat Level</h3><p>100,000-325,000 Scoville heat units (extremely hot).</p>"
 
-          
+
         },
         {
           "name": "Galahad Tomato",
@@ -94,17 +94,40 @@ document.addEventListener("DOMContentLoaded", function() {
           "image": "https://raw.githubusercontent.com/chrisyoung0101/victory-of-winonna/main/images/cherokee-carbon-tomato.jpeg",
           "desc": "<h3>Description 🍅</h3><p>What do you get when you cross 'Cherokee Purple' and 'Carbon'? A tomato lover's dream with heirloom flavor earlier in the season, increased production, and fewer cracks and blemishes. Large, 10-12-ounce, purple beefsteak fruit are perfect for slicing, with award-winning rich flavor.</p><h3>Variety Info 🍅</h3><ul><li>Days to Maturity: 75–80 days from transplanting</li><li>Family: Solanaceae</li><li>Type: Indeterminate, Slicing Tomato</li><li>Native: Andes</li><li>Hardiness: Frost-sensitive annual</li><li>Exposure: Full sun</li></ul><p>Recommended to start indoors 4 to 6 weeks before transplanting, with ideal soil temperatures for germination between 70°–90°F. Harvest when fruits are deep purple-burgundy and slightly soft.</p>"
 
+        }, 
+        {
+          "name": "Nasturtium",
+          "image": "https://raw.githubusercontent.com/chrisyoung0101/victory-of-winonna/main/images/nasturtium-alaska.jpeg",
+          "desc": "<h3>Description</h3><p>Nasturtium, scientifically known as Tropaeolum majus, is a popular ornamental plant characterized by its vibrant flowers and rounded leaves. Not only are the flowers of the Nasturtium plant eye-catching, but they are also edible, offering a peppery taste similar to arugula, making them a delightful addition to salads. The plant is easy to grow and is often used as a companion plant because of its ability to deter certain pests. Nasturtiums thrive in full sun to partial shade and require well-drained soil.</p><h3>Culinary Use</h3><p>Both the leaves and flowers of Nasturtium are edible, with a spicy, peppery flavor that adds a zesty note to salads, sandwiches, and garnishes. The unripe seed pods can be pickled and used as a caper substitute.</p>"
         }
+        
       ];
 
-    const container = document.getElementById('vegetables');
-    veggies.forEach(veg => {
-        const vegElement = document.createElement('div');
-        vegElement.innerHTML = `
-            <img src="${veg.image}" alt="${veg.name}">
-            <h3>${veg.name}</h3>
-            <p>${veg.desc}</p>
-        `;
-        container.appendChild(vegElement);
+      const container = document.getElementById('vegetables');
+      veggies.forEach(veg => {
+          const vegElement = document.createElement('div');
+          vegElement.setAttribute('id', veg.name.replace(/\s+/g, '')); // Set ID for anchor linking
+          vegElement.innerHTML = `
+              <img src="${veg.image}" alt="${veg.name}">
+              <h3>${veg.name}</h3>
+              <p>${veg.desc}</p>
+          `;
+          container.appendChild(vegElement);
+      });
+
+    // Show up arrow when scrolling down
+    window.onscroll = function() {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            document.getElementById('upArrow').style.display = "block";
+        } else {
+            document.getElementById('upArrow').style.display = "none";
+        }
+    };
+
+ // Scroll to top when clicking the up arrow
+ document.getElementById('upArrow').onclick = function() {
+    document.body.scrollTop = 0; // For Safari
+    document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE, and Opera
+};
+    
     });
-});
