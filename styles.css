@@ -43,27 +43,25 @@ p {
     clear: both;
 }
 
+
 /* Sidebar styles */
 #sidebar {
     position: fixed;
-    top: 60px;
-    left: 0;
+    top: 0; /* Adjust if needed */
+    right: 0;
     width: 250px;
-    max-height: 90vh;
+    max-height: 100vh; /* Adjust based on view height */
     background-color: #f4f4f4;
     padding: 10px;
     overflow-y: auto;
-    box-shadow: 2px 0 5px rgba(0,0,0,0.1);
-    transition: transform 0.3s ease-in-out;
-    transform: translateX(-100%); /* start hidden */
-    z-index: 1000;
+    box-shadow: -2px 0 5px rgba(0,0,0,0.1);
+    transform: translateX(100%); /* Hide sidebar off the right edge */
+    transition: transform 0.3s ease; /* Smooth transition for sidebar */
+    z-index: 1001; /* Ensure it appears above other content */
 }
 
-@media (min-width: 768px) {
-    #sidebar {
-        transform: translateX(0); /* Always visible on wider screens */
-    }
-}
+
+
 
 
 #sidebar h3 {
@@ -92,12 +90,7 @@ p {
     right: 20px;
     bottom: 20px;
     cursor: pointer;
-    display: none; /* Hidden by default */
-}
-
-#upArrow img {
-    width: 50px;
-    height: 50px;
+    display: none; /* Change this in JS as needed */
 }
 
 .up-arrow {
@@ -107,3 +100,27 @@ p {
     border-right: 10px solid transparent;
     border-bottom: 15px solid black;
 }
+
+#menu-toggle {
+    position: fixed;
+    top: 20px;  /* Adjust based on design */
+    right: 20px; /* Position on the right side */
+    z-index: 1001; /* Ensure it's above other content */
+    opacity: 0.5; /* Set initial transparency */
+    background-color: #007BFF; /* A pleasing blue shade */
+    color: white; /* White text color */
+    border: none; /* No border for a cleaner look */
+    border-radius: 5px; /* Rounded corners */
+    padding: 10px 15px; /* Top/bottom and left/right padding */
+    font-size: 16px; /* Adequate text size */
+    cursor: pointer; /* Cursor indicates it's clickable */
+    transition: opacity 0.3s ease, background-color 0.3s ease; /* Smooth transitions for opacity and background color */
+}
+
+#menu-toggle:hover, #menu-toggle:focus {
+    opacity: 1; /* Full opacity on hover/focus */
+    background-color: #0056b3; /* Darker blue when hovered/focused for better visibility */
+}
+
+
+

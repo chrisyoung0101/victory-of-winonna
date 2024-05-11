@@ -223,7 +223,7 @@ document.addEventListener("DOMContentLoaded", function() {
   const container = document.getElementById('vegetables');
   veggies.forEach(veg => {
       const vegElement = document.createElement('div');
-      vegElement.setAttribute('id', veg.name.replace(/\s+/g, ''));
+      vegElement.setAttribute('id', veg.name.replace(/\s+/g, '')); // Set ID for anchor linking
       vegElement.innerHTML = `
           <img src="${veg.image}" alt="${veg.name}">
           <h3>${veg.name}</h3>
@@ -232,12 +232,37 @@ document.addEventListener("DOMContentLoaded", function() {
       container.appendChild(vegElement);
   });
 
-  const toggleButton = document.getElementById('menu-toggle');
   const sidebar = document.getElementById('sidebar');
+  const toggleButton = document.getElementById('menu-toggle');
 
-  toggleButton.addEventListener('click', function() {
-      // Toggle sidebar visibility using 'transform'
-      sidebar.style.transform = (sidebar.style.transform === 'translateX(0px)') ? 'translateX(-100%)' : 'translateX(0px)';
+//   toggleButton.addEventListener('click', function() {
+//     if (sidebar.style.display === 'block') {
+//         sidebar.style.display = 'none';
+//     } else {
+//         sidebar.style.display = 'block';
+//     }
+// });
+
+toggleButton.addEventListener('click', function() {
+  if (sidebar.style.transform === 'translateX(0%)') {
+    sidebar.style.transform = 'translateX(100%)'; // Hides the sidebar
+  } else {
+    sidebar.style.transform = 'translateX(0%)'; // Shows the sidebar
+  }
+});
+
+
+
+
+
+  
+
+  // Close the sidebar when any link inside it is clicked
+  const links = sidebar.querySelectorAll('a');
+  links.forEach(link => {
+      link.addEventListener('click', () => {
+          sidebar.style.transform = 'translateX(100%)';
+      });
   });
 
   // Show up arrow when scrolling down
