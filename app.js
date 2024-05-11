@@ -124,7 +124,7 @@ document.addEventListener("DOMContentLoaded", function() {
       "desc": "https://www.chileplants.com/search.aspx?ProductCode=PEPMAG"
     },
     {
-      "name": "Thai hot",
+      "name": "Thai Hot",
       "image": "https://raw.githubusercontent.com/chrisyoung0101/victory-of-winonna/main/images/Thai-Hot-Chili-Pepper.jpeg",
       "desc": "<h3>Description</h3><p>The chile-loving Thais consume more hot peppers than any other culture. Discover the delights of <strong>'Thai Hot'</strong> flavor in your favorite stir-fry or other Asian dish!</p><h3>Variety Info</h3><ul><li><strong>Plant Type:</strong> Compact, mounding 8\" tall plants covered with 1½\"-3\" long, upright red and green peppers at the same time, making it a festive and decorative choice for patio containers.</li><li><strong>Scoville Heat Units:</strong> 50,000-100,000 (very hot).</li></ul><h3>Attributes</h3><p>This variety is perfect for those who enjoy a powerful kick in their culinary creations.</p>"
   
